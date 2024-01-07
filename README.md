@@ -1,6 +1,6 @@
-# Snake-Game
+# Snake
 
-This is my implementation of the popular Snake game using Python module Turtle
+This is my implementation of the popular Snake game using the Python module Turtle
 
 <img src="snake-demo.gif" width="400"/>
 

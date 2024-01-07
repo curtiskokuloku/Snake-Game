@@ -1,4 +1,4 @@
-# Snake
+# Snake Game in Python
 
 This is my implementation of the popular Snake game using the Python module Turtle
 

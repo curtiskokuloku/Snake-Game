@@ -41,13 +41,28 @@ class Snake:
         """
         Display the player's score on the screen using turtle graphics.
         """
+        # Create a new turtle object to display the score.
         self.score = turtle.Turtle()
+
+        # Set the speed of the turtle to the fastest speed for immediate display.
         self.score.speed(0)
+
+        # Set the shape of the turtle to a square for simplicity.
         self.score.shape("square")
+
+        # Set the color of the turtle to black for readability.
         self.score.color("black")
+
+        # Lift up the turtle's pen to prevent drawing lines when moving.
         self.score.penup()
+
+        # Hide the turtle to only display the text without seeing the turtle itself.
         self.score.hideturtle()
+
+        # Set the position of the turtle to the desired location on the screen.
         self.score.goto(315, 610)
+
+        # Write the current score and high score on the screen.
         self.score.write(
             "Score: {} High Score: {}".format(self.current_score, self.high_score),
             align="center",
@@ -58,27 +73,46 @@ class Snake:
         """
         Add a new segment to the snake representing its growth.
         """
+        # Create a new turtle object to represent the new segment of the snake.
         head = turtle.Turtle()
+
+        # Set the speed of the turtle to the fastest speed.
         head.speed(0)
+
+        # Set the fill color of the turtle to the snake's color.
         head.fillcolor(self.color)
+
+        # Begin the filling of the turtle shape.
         head.begin_fill()
+
+        # Set the shape of the turtle to a square and adjust its size.
         head.shape("square")
         head.shapesize(1.5, 1.5)
+
+        # End the filling of the turtle shape.
         head.end_fill()
+
+        # Lift up the turtle's pen to prevent drawing lines when moving.
         head.penup()
+
+        # Set the position of the new segment to the snake's current position.
         head.setpos(self.x, self.y)
+
+        # Add the new segment (turtle object) to the segments list of the snake.
         self.segments.append(head)
 
     def restart(self):
         """
         Reset the snake to its initial state.
         """
+        # Hide each segment of the snake from the screen.
         for seg in self.segments:
             seg.hideturtle()
-        self.segments.clear()
-        self.current_score = 0
-        self.score.clear()
-        self.user_score()
+
+        self.segments.clear()  # Clear the segments list to remove all previous segments from memory.
+        self.current_score = 0  # Reset the current score to zero.
+        self.score.clear()  # Clear the previous score displayed on the screen.
+        self.user_score()  # Update the score display to reflect the reset score.
 
     def move(self, food):
         """
@@ -87,20 +121,33 @@ class Snake:
         Args:
             food (Food): Food object to check for collisions and update the score.
         """
+        # Update the snake's x and y coordinates based on its velocity.
         self.x += self.vx
         self.y += self.vy
+
+        # Check if the snake's head coordinates match the food coordinates.
         if self.x == food.x and self.y == food.y:
+            # If there's a collision with food, grow the snake, update food position,
+            # increase the score, and update the displayed score.
             self.grow()
             food.random_position()
             self.current_score += 10
+
+            # Update the high score if the current score surpasses it.
             if self.current_score > self.high_score:
                 self.high_score = self.current_score
+
+            # Clear the previous score display and update with the new score.
             self.score.clear()
             self.user_score()
         else:
+            # If the snake doesn't collide with food, move each segment of the snake forward.
             for i in range(len(self.segments) - 1):
+                # Move each segment to the position of the segment in front of it.
                 self.segments[i].setx(self.segments[i + 1].xcor())
                 self.segments[i].sety(self.segments[i + 1].ycor())
+
+            # Update the position of the snake's head to its new position.
             head = self.segments[-1]
             head.setpos(self.x, self.y)
 

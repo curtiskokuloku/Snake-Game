@@ -1,9 +1,57 @@
 # Snake Game in Python
 
-This is my implementation of the popular Snake game using the Python module Turtle
-
 <img src="snake-demo.gif" width="400"/>
 
-## How to Play
+## Project Description
 
-Use arrow keys to move around. Collect food and grow your snake. Press <b>R</b> to restart once you die.
+> The Snake Game Project is a classic recreation of the popular snake game where players navigate a snake around the screen to eat food pellets, thereby growing longer. This project aims to provide an engaging and interactive gaming experience for users, allowing them to control the snake's movements using arrow keys. Developed using Python and the Turtle graphics library, this project showcases object-oriented programming principles, game development concepts, and user interface design.
+
+## Technologies Used
+
+- Python:
+  - Chosen for its simplicity and versatility in creating 2D games.
+  - Use Python3 for MacOS and Python for Windows
+  - [Guide to install](https://www.scaler.com/topics/python/how-to-install-python-on-macos/)
+- Turtle Graphics Library:
+  - Utilized for rendering graphics, managing animations, and handling user input.
+  - [Guide to install](https://pypi.org/project/PythonTurtle/)
+- Random Module:
+  - Used for generating random positions for food pellets.
+  - [More](https://docs.python.org/3/library/random.html)
+- Git and GitHub:
+  - Version control and collaboration platform for project management.
+  - [More](https://docs.github.com/en/get-started/using-git/about-git)
+
+## Challenges and Future Features
+
+- Challenges Faced:
+  - Implementing collision detection, managing snake growth, and optimizing game performance were some of the challenges encountered during development.
+- Future Features:
+  - Planned enhancements include implementing levels with increasing difficulty, adding sound effects, and creating a leader-board to track high scores.
+
+## Installation and Setup
+
+### Prerequisites
+
+- Python 3.x installed on your system.
+- Basic knowledge of terminal or command prompt.
+
+### Steps
+
+1. Clone the repository to your local machine
+   - `git clone https://github.com/curtiskokuloku/Snake.git`
+2. Navigate to the project directory
+   - `cd Snake/src`
+
+### Usage
+
+1. Run the game using the following command
+   - `python3 main.py`
+2. Use the arrow keys (Up, Down, Left, Right) to control the snake's movements.
+3. Press 'r' to restart the game if needed.
+
+## Credits
+
+> Developer: Curtis Kokuloku
+---
+04/2022

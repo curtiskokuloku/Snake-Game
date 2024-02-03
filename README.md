@@ -1,10 +1,10 @@
-# Snake Game in Python
+# Snake Game
 
 <img src="snake-demo.gif" width="400"/>
 
 ## Project Description
 
-> The Snake Game Project is a classic recreation of the popular snake game where players navigate a snake around the screen to eat food pellets, thereby growing longer. This project aims to provide an engaging and interactive gaming experience for users, allowing them to control the snake's movements using arrow keys. Developed using Python and the Turtle graphics library, this project showcases object-oriented programming principles, game development concepts, and user interface design.
+> Classic Tetris game created in Python using the Turtle graphics library. Aims to deliver a fun and interactive gaming experience. Demonstrates expertise in Python programming and graphical user interface design.
 
 ## Technologies Used
 

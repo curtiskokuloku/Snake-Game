@@ -4,7 +4,7 @@
 
 ## Project Description
 
-> Classic Tetris game created in Python using the Turtle graphics library. Aims to deliver a fun and interactive gaming experience. Demonstrates expertise in Python programming and graphical user interface design.
+> Classic snake game recreated in Python using the Turtle graphics library. Demonstrates proficiency in object-oriented programming, game development, and user interface design. Blend of nostalgia and modern techniques for an engaging and educational gaming experience.
 
 ## Technologies Used
 
